@@ -1,0 +1,52 @@
+body{
+    font-family: Literata, serif, Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(../images/pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1{
+    margin-bottom: 0;
+}
+header h3{
+    text-align: right;
+    padding-right: 20%;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+}
+
+.mainSection{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+header hr{
+    color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    clear: both;
+}
+
+footer p{
+    font-size: 1.4em;
+    position: fixed;
+    bottom: 0; 
+    right: 38%;
+    left: 38%; 
+    margin: 0;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+br{
+    margin-bottom: 12px;
+}
+
