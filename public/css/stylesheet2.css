@@ -1,0 +1,30 @@
+body{
+    font-family: 'Red Hat Display', serif, Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(../images/simple-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header hr{
+    color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    clear: both;
+}
+
+footer p{
+    font-size: 1.4em;
+    position: fixed;
+    bottom: 0; 
+    right: 38%;
+    left: 38%; 
+    margin: 0;
+}
+
+#cityName {
+    margin-top: 50px;
+}
+
+#fetchStats {
+    margin-top: 10px;
+}

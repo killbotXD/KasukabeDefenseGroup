@@ -1,9 +1,10 @@
 body{
     font-family: Literata, serif, Arial, Helvetica, sans-serif;
     text-align: center;
-    background-image: url(../images/pattern.png);
+    background-image: url(../images/got.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
 header h1{
