@@ -1,0 +1,7 @@
+How to run the website locally:
+
+* Download the zip file
+* Go to the root directory
+* Run "npm install"
+* Run "npm start"
+* Go to "localhost:3000"

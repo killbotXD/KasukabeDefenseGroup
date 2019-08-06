@@ -5,7 +5,7 @@
         <title>HomePage</title>
         <meta charset= "UTF-8">
         <meta name= "viewport" content= "width= device-width, initial-scale= 1"> 
-        <link href= "../public/css/stylesheet.css" rel= "stylesheet" type= "text/css">
+        <link href= "../css/stylesheet.css" rel= "stylesheet" type= "text/css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Literata">
     </head>
 
@@ -18,12 +18,12 @@
         </header>
 
         <div class= "mainSection">
-            <form>
+            <form method="POST">
                 <label>Enter Your Voter ID:</label>
                 <br>
-                <input type ="text" required>
+                <input type = "text" id = "voterId" required>
                 <br>
-                <button type ="submit" id = "next" onclick = "">Next</button>
+                <button type = "button" id = "next">Next</button>
             </form>
         </div>
 
@@ -31,7 +31,7 @@
             <small><p>Code open sourced at Github</p></small>
         </footer>
 
-        <script src= "mainJsFile.js" type= "text/Javascript">
+        <script src= "../public/javascript/checkVoterId.js" type= "text/Javascript">
     </body>
 
 </html>
