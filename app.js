@@ -6,7 +6,9 @@ const app = express();
 
 let PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+app.use('/css', express.static('public/css'));
+app.use('/javascript', express.static('public/javascript'));
+app.use('/images', express.static('public/images'));
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, './app/index.html'));
