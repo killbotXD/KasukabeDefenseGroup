@@ -4,9 +4,14 @@
     <head>
         <title>HomePage</title>
         <meta charset= "UTF-8">
-        <meta name= "viewport" content= "width= device-width, initial-scale= 1"> 
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; font-src *; connect-src *">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; font-src *; connect-src *">
+        <meta http-equiv="X-WebKit-CSP" content= "default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; font-src *; connect-src *">
+ -->        <meta name= "viewport" content= "width= device-width, initial-scale= 1"> 
         <link href= "css/stylesheet.css" rel= "stylesheet" type= "text/css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Literata">
+    
+ <link rel="shortcut icon" type="image/svg" href="images/poll.svg"/>
     </head>
 
     <body>
@@ -17,21 +22,26 @@
             <hr>
         </header>
 
-        <div class= "mainSection">
-            <form method="POST">
+        <div>
+            <form id = "form">
                 <label>Enter Your Voter ID:</label>
                 <br>
-                <input type = "text" id = "voterId" required>
+                <input type = "text" id = "input" placeholder = "VoterId" required>
                 <br>
-                <button type = "button" id = "next">Next</button>
+                <button type = "submit" id = "next">Next</button>
             </form>
+        </div>
+
+        <div id = "display">
+
         </div>
 
         <footer>
             <small><p>Code open sourced at Github</p></small>
         </footer>
-
-        <script src= "javascript/checkVoterId.js" type= "text/Javascript">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src= "javascript/main.js"></script>
     </body>
 
 </html>
