@@ -31,8 +31,17 @@ app.get('/:id', (req, res) => {
     });
 });
 
-app.put('/:id', (req, res) => {
-	
+app.put('/:id/:slot', (req, res) => {
+	const vId = req.params.id;
+	const slotSelected = req.params.slot;
+	db.getDb().collection(collection).findOneAndUpdate({ _voterId : vId }, {$set : {_choice : parseInt(slotSelected)}}, (err, doc) => {
+        if(err)
+            console.log("Error");
+        else {
+			console.log(doc);
+			res.jsonp(doc);
+		}
+    });
 });
 
 db.connect((err) => {

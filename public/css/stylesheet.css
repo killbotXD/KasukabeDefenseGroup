@@ -51,3 +51,9 @@ br{
     margin-bottom: 12px;
 }
 
+#sec2 h3{
+    margin-left: 100px;
+    text-align: left;
+    color: black;
+    display: inline;
+}
