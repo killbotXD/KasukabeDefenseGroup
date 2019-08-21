@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href= "../public/css/stylesheet2.css" rel= "stylesheet" type= "text/css">
+    <link href= "css/stylesheet2.css" rel= "stylesheet" type= "text/css">
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <title>Stats</title>
 </head>
@@ -29,5 +29,32 @@
             <small><p>Code open sourced at Github</p></small>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            const cityName = $("#cityName").val();
+            const statsSection = $("#statsSection");
+
+            const buildtemplate3 = (doc) => {
+                return `<br><p><span class = "type">Slot 0 : </span><span class = "value"> ${doc._slot0}</span>
+                    <br><p><span class = "type">Slot 1 : </span><span class = "value"> ${doc._slot1}</span>
+                    <br><p><span class = "type">Slot 2 : </span><span class = "value"> ${doc._slot2}</span>
+                    <br><p><span class = "type">Slot 3 : </span><span class = "value"> ${doc._slot3}</span></p>`;
+            }
+
+            $('#fetchStats').click(() => {
+            fetch(`/stats/${cityName}`, {
+                method : "get",
+                headers : {
+                    "Content-Type" : "application/json; charset = utf-8"
+                }
+            }).then((response) => {
+            return response.json();
+            }).then((doc) => {
+                statsSection.append(buildtemplate3(doc));
+            });
+            });
+        });
+    </script>
 </body>
 </html>
